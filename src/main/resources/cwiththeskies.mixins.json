@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "net.SRG.cwiththeskies.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "chain_conveyor.ChainConveyorMixin"
+
+  ],
+  "client": [
+
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
