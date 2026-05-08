@@ -4,6 +4,7 @@ import com.simibubi.create.AllTags;
 import dev.simulated_team.simulated.content.blocks.rope.strand.client.ZiplineClientManager;
 import dev.simulated_team.simulated.index.SimTags;
 import dev.simulated_team.simulated.util.click_interactions.InteractCallback;
+import net.SRG.cwiththeskies.stuff.packages_on_ropes.PackageOnRope;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.ItemStack;
@@ -25,11 +26,14 @@ public class ZiplineMixin {
        if (action == GLFW.GLFW_RELEASE || hoveringRope == null || ridingRope == hoveringRope)
            cir.setReturnValue(InteractCallback.Result.empty());
 
-       final Boolean isPackage = AllTags.AllItemTags.PACKAGES.matches(Minecraft.getInstance().player.getMainHandItem());
+
+       final Minecraft mcx = Minecraft.getInstance();
+       final ItemStack mainHandItemx = mcx.player.getMainHandItem();
+
+       final Boolean isPackage = AllTags.AllItemTags.PACKAGES.matches(mainHandItemx);
 
        if (isPackage){
             //TODO: here shall lay the legendary code that will put package on rope
-
        }
    }
 
